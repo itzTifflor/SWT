@@ -1,8 +1,25 @@
-body {
-  text-align: center;
-  font: Monospace;
-  font-size: x-large;
+body{
   color: white;
+}
+header{
+  font-family: monospace, serif;
+  text-align: center;
+  font-size: 30pt;
+}
+a{
+  font-family: monospace, serif;
+  text-align: center;
+  font-size: 30pt;
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: aqua;
+}
+.untertitel{
+  font-family: monospace, serif;
+  text-align: center;
+  font-size: 30pt;
 }
 img.background {
   width: 100%;
@@ -13,16 +30,25 @@ img.background {
   z-index: -1;
   filter:grayscale(75%);
 }
-img.articlebackground {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
+.background400i{
+  background-image: url(../images/400i_cruising_through_Area18_3.15.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background890J{
+  background-image: url(../images/09_890Jump_Space.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.backgroundcutlassred{
+  background-image: url(../images/star-citizen-cutlass-red_6089588.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 div.gallery{
-  /*border: 1px solid #202020;**/
   width: 600px;
   float: left;
   margin: 5px;
@@ -39,14 +65,36 @@ div.desc {
   text-align: center;
   padding: 15px;
   background-color: rgba(100, 100, 100, 0.25);
+  font-size: 15pt;
 }
 div.pos{
   display: flex;
+  margin-top: 10%;
   align-content: center;
   justify-content: center;
 }
 article{
-  background-color: rgba(100, 100, 100, 0.5);
-  text-align: center;
-  width: 200px;
+  display: flexbox;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40vw;
+  background-color: rgba(101, 101, 101, 0.7);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  text-align: justify;
+  font-family: monospace, serif;
+  color: white;
+  font-size: 15pt;
+}
+textarea{
+  width: 98.5%;
+  resize: none;
+  padding: 10px 5px;
+  font-size: 13pt;
+  background-color: transparent;
+  border-color: black;
+  color: white;
+  font-family: monospace, serif;
 }
