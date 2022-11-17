@@ -49,7 +49,7 @@ img.background {
   background-size: cover;
 }
 div.gallery{
-  width: 600px;
+  width: 800px;
   float: left;
   margin: 5px;
 }
@@ -97,4 +97,9 @@ textarea{
   border-color: black;
   color: white;
   font-family: monospace, serif;
+  
+}
+
+.mySlides {
+  display:none
 }
