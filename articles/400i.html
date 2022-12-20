@@ -50,27 +50,22 @@
     </section>
   </div>
   <script>
-    "use strict"; // ältere JavaScript Systax verbieten
+    "use strict";
 
-// select-Element zur Spielauswahl im DOM finden
 var typSelector = document.querySelector("#typ-selector select");
 
-// Auf Änderungen des select-Elements reagieren
 typSelector.addEventListener("change", function(event) {
-  // Referenz auf select-Elements
+
   var select = this;
-  // Ausgewählten Wert auslesen
+
   var typFileName = select.value;
 
-  // Informationen zum Spiel per AJAX laden.
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 
-      // Inhalt der Daten von JSON in JavaScript-Objekt wandeln
       var typData = JSON.parse(this.responseText);
 
-      // Anzeige für das Spiel mit geladeden Daten aktualisieren
       updateTypData(typData);
 
     }
@@ -81,14 +76,11 @@ typSelector.addEventListener("change", function(event) {
 
 var updateTypData = function(typData) {
 
-  // Anzeigebereich für Spielinformationen im DOM finden
   var typPanel = document.querySelector("#loadout-panel");
 
-  // Titel setzen
   var title = typPanel.querySelector(".title");
   title.innerHTML = typData.title;
 
-  // Beschreibung setzten
   var description = typPanel.querySelector(".description");
   description.innerHTML = typData.description;
 }
